@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Vivek Kulkarni - Build Notes</title>
+    <link>https://example.com/</link>
+    <description>Notes on AI systems, product engineering, and developer education.</description>
+    <item>
+      <title>Designing AI Products That Engineers Can Trust</title>
+      <link>https://example.com/#blogs</link>
+      <pubDate>Mon, 20 Jul 2026 00:00:00 +0000</pubDate>
+      <description>A practical framework for evals, fallbacks, user feedback, and confidence-building UI.</description>
+    </item>
+  </channel>
+</rss>
