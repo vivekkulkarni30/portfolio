@@ -108,18 +108,32 @@
       <article class="portfolio-section hero-grid" id="about" data-id="about">
         <div class="code-hero">
           ${sectionHeader("about", "profile entry point")}
+          <div class="welcome-strip">
+            <span class="live-dot"></span>
+            <span>Welcome to my developer workspace</span>
+            <code>portfolio --interactive</code>
+          </div>
           <div class="code-window" aria-label="Profile source code">
             <ol>
-              <li><span class="token keyword">const</span> engineer <span class="token operator">=</span> {</li>
+              <li><span class="token keyword">export default function</span> Portfolio() {</li>
+              <li>  <span class="token keyword">const</span> engineer <span class="token operator">=</span> {</li>
               <li>  name: <span class="token string">"${data.profile.name}"</span>,</li>
               <li>  role: <span class="token string">"${data.profile.role}"</span>,</li>
               <li>  location: <span class="token string">"${data.profile.location}"</span>,</li>
               <li>  focus: [${data.profile.currentFocus.map((item) => `<span class="token string">"${item}"</span>`).join(", ")}],</li>
-              <li>  shipping: <span class="token boolean">true</span>,</li>
-              <li>};</li>
+              <li>  buildMode: <span class="token string">"learn by shipping"</span>,</li>
+              <li>  available: <span class="token boolean">true</span>,</li>
+              <li>  };</li>
+              <li>  <span class="token keyword">return</span> <span class="token tag">&lt;CreatorWorkspace profile={engineer} /&gt;</span>;</li>
+              <li>}</li>
             </ol>
           </div>
           <h1>${data.profile.name}</h1>
+          <div class="role-row">
+            <span>Software Engineer</span>
+            <span>Open Source Contributor</span>
+            <span>Builder</span>
+          </div>
           <p class="lead">${data.profile.intro}</p>
           <div class="cta-row">
             <a href="#projects" class="button primary">Explore work</a>
@@ -127,8 +141,16 @@
             <a href="${data.profile.socials[0].url}" class="button ghost" target="_blank" rel="noreferrer">GitHub</a>
           </div>
         </div>
-        <div class="workspace-card">
+        <div class="workspace-card profile-card">
+          <div class="profile-card-head">
+            <span class="live-dot"></span>
+            <span>profile.preview</span>
+          </div>
           <img src="assets/workspace-mark.svg" alt="Abstract developer workspace mark" />
+          <div class="profile-console">
+            <span class="prompt">$</span>
+            <span>npx vivek-kulkarni</span>
+          </div>
           <div class="stats-grid">
             ${data.profile.stats.map((stat) => `<div><strong>${stat.value}</strong><span>${stat.label}</span></div>`).join("")}
           </div>
@@ -137,6 +159,14 @@
           <div class="panel markdown-panel">
             <h2>README.md</h2>
             <p>I work at the intersection of software engineering, education, and product creation. My best work turns complex systems into tools people can understand, trust, and use repeatedly.</p>
+          </div>
+          <div class="panel creator-panel">
+            <h2>workspace.activity</h2>
+            <ul>
+              <li><span>building</span><strong>developer-first products</strong></li>
+              <li><span>teaching</span><strong>practical full-stack engineering</strong></li>
+              <li><span>writing</span><strong>AI, systems, and product notes</strong></li>
+            </ul>
           </div>
           <div class="panel stack-panel">
             <h2>skills.json</h2>
@@ -230,6 +260,7 @@
                   </div>
                   <div class="json-line"><span>"platforms"</span>: ${JSON.stringify(product.platforms)}</div>
                   <div class="tags">${product.tags.map((tag) => `<span>${tag}</span>`).join("")}</div>
+                  <a class="launch-link" href="#contact">Open product file</a>
                 </article>
               `
             )
