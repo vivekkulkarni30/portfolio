@@ -2,12 +2,12 @@ window.portfolioData = {
   profile: {
     name: "Vivek Kulkarni",
     handle: "vivek.dev",
-    role: "Software Engineer, Educator, Builder",
+    role: "Software Engineer, Open Source Contributor, Builder",
     location: "India",
-    availability: "Open to select consulting, product, and education collaborations",
-    email: "hello@vivek.dev",
+    availability: "Open to building products, solving challenges, and creating value.",
+    email: "vivekkulkarni3013@gmail.com",
     intro:
-      "I build reliable software, teach engineering through practical examples, and turn product ideas into clean, useful systems.",
+      "Turning ideas into scalable, elegant, and impactful software solutions..",
     currentFocus: [
       "AI-assisted developer tools",
       "Full-stack products with strong UX",
@@ -20,10 +20,10 @@ window.portfolioData = {
       { label: "Products launched", value: "6" }
     ],
     socials: [
-      { label: "GitHub", url: "https://github.com/" },
-      { label: "LinkedIn", url: "https://linkedin.com/" },
-      { label: "YouTube", url: "https://youtube.com/" },
-      { label: "X", url: "https://x.com/" }
+      { label: "GitHub", url: "https://github.com/vivekkulkarni30" },
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/vivek-kulkarni-784b46252/" },
+      { label: "X", url: "https://x.com/viveekkulkarni" }
+       
     ]
   },
   sections: [
